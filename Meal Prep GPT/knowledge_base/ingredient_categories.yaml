@@ -1,0 +1,37 @@
+ingredient_categories:
+
+  animal_proteins:
+    description: Complete proteins from animal sources; main protein anchors
+    examples: [chicken, beef, salmon, eggs, turkey, yogurt]
+
+  plant_proteins:
+    description: High-protein plant sources; often legumes, soy, or pulses
+    examples: [tofu, lentils, black beans, tempeh, chickpeas]
+
+  starchy_carbs:
+    description: Calorie-dense carb bases; typically grains, tubers, or bread
+    examples: [rice, oats, pasta, potatoes, bulgur, bread, noodles]
+
+  non_starchy_veg:
+    description: Low-calorie, high-fiber vegetables rich in micronutrients
+    examples: [spinach, broccoli, zucchini, peppers, cabbage, green beans]
+
+  healthy_fats:
+    description: Fat-dominant ingredients that support satiety and nutrient absorption
+    examples: [olive oil, avocado, peanuts, chia seeds, flaxseed, tahini]
+
+  flavor_bases:
+    description: Aromatic, acidic, or umami ingredients that provide core flavor
+    examples: [garlic, onion, ginger, lemon, lime juice, vinegar, spices]
+
+  sauces:
+    description: Cohesive liquid or paste-based flavor systems
+    examples: [soy sauce, salsa, tomato sauce, curry paste, tahini dressing]
+
+  toppings:
+    description: Garnishes for texture, color, or micronutrient bump
+    examples: [fresh herbs, chili flakes, toasted seeds, crispy onions]
+
+  meal_foundation:
+    description: Ingredients commonly used as primary structural anchors (protein + carb)
+    examples: [chicken, beef, tofu, fish, rice, potatoes, bread, pasta]

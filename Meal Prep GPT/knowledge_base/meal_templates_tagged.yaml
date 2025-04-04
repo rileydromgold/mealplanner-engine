@@ -1,0 +1,208 @@
+meal_templates:
+  
+  oat_bowl:
+    required_one_of:
+    - animal_proteins
+    - plant_proteins
+    required:
+    - starchy_carbs
+    optional:
+    - toppings
+    - healthy_fats
+    meal_types:
+    - breakfast
+    - snack
+    cuisine:
+    - global
+
+  yogurt_bowl:
+    required_one_of:
+    - animal_proteins
+    - plant_proteins
+    required:
+    - starchy_carbs
+    optional:
+    - toppings
+    - healthy_fats
+    meal_types:
+    - breakfast
+    - snack
+    cuisine:
+    - global
+  
+  smoothie:
+    required_one_of:
+    - animal_proteins
+    - plant_proteins
+    required:
+    - starchy_carbs
+    - healthy_fats
+    optional:
+    - flavor_bases
+    - toppings
+    meal_types:
+    - breakfast
+    - snack   
+    cuisine:
+    - global
+    
+  
+  stir_fry:
+    required_one_of:
+    - animal_proteins
+    - plant_proteins
+    required:
+    - starchy_carbs
+    - non_starchy_veg
+    optional:
+    - sauces
+    - toppings
+    - healthy_fats
+    - flavor_bases
+    meal_types:
+    - lunch
+    - dinner
+    cuisine:
+    - asian
+  
+  tray_bake:
+    required_one_of:
+    - animal_proteins
+    - plant_proteins
+    required:
+    - starchy_carbs
+    - non_starchy_veg
+    - healthy_fats
+    optional:
+    - flavor_bases
+    - toppings
+    meal_types:
+    - lunch
+    - dinner
+  
+  stew:
+    required_one_of:
+    - animal_proteins
+    - plant_proteins
+    required:
+    - starchy_carbs
+    - non_starchy_veg
+    optional:
+    - healthy_fats
+    - flavor_bases
+    - toppings
+    meal_types:
+    - lunch
+    - dinner
+  
+  frittata:
+    required:
+    - animal_proteins
+    - non_starchy_veg
+    - healthy_fats
+    optional:
+    - flavor_bases
+    - toppings
+    meal_types:
+    - breakfast
+    - lunch
+  
+  snack_generic:
+    required_one_of:
+    - animal_proteins
+    - plant_proteins
+    optional_any:
+    - starchy_carbs
+    - non_starchy_veg
+    - healthy_fats
+    - flavor_bases
+    - sauces
+    - toppings
+    meal_types:
+    - snack
+  
+  grain_bowl:
+    required_one_of:
+    - animal_proteins
+    - plant_proteins
+    required:
+    - starchy_carbs
+    optional:
+    - non_starchy_veg
+    - healthy_fats
+    - sauces
+    - toppings
+    - flavor_bases
+    meal_types: 
+    - lunch
+    - dinner
+  
+  wrap_or_sandwich:
+    required_one_of:
+    - animal_proteins
+    - plant_proteins
+    required:
+    - starchy_carbs
+    - sauces
+    optional:
+    - non_starchy_veg
+    - healthy_fats
+    - toppings
+    - flavor_bases
+    meal_types: 
+    - lunch
+    - dinner
+    - breakfast
+    cuisine:
+    - global
+
+  noodle_bowl:
+    required_one_of:
+    - animal_proteins
+    - plant_proteins
+    required:
+    - starchy_carbs
+    - non_starchy_veg
+    optional:
+    - healthy_fats
+    - sauces
+    - toppings
+    - flavor_bases
+    meal_types: 
+    - lunch
+    - dinner
+    cuisine:
+    - asian
+  
+  breakfast_plate:
+    required:
+    - animal_proteins
+    - starchy_carbs
+    optional:
+    - healthy_fats
+    - toppings
+    - flavor_bases
+    - non_starchy_veg
+    meal_types: 
+    - breakfast
+    cuisine:
+    - global
+  
+  flatbread_combo:
+    required_one_of:
+    - animal_proteins
+    - plant_proteins
+    required:
+    - starchy_carbs
+    optional:
+    - sauces
+    - toppings
+    - flavor_bases
+    - healthy_fats
+    - non_starchy_veg
+    meal_types: 
+    - lunch
+    - dinner
+    cuisine:
+    - latin
+    - mediterranean

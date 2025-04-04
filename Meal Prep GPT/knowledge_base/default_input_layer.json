@@ -1,0 +1,56 @@
+{
+  "calorie_target": 2300,
+  "protein_target": "170g",
+  "fat_target": "65g",
+  "carb_target": "240g",
+  "micronutrient_targets": {
+    "calcium_mg": 1000,
+    "iron_mg": 8,
+    "magnesium_mg": 400,
+    "zinc_mg": 14,
+    "copper_mg": 1.7,
+    "manganese_mg": 5.5,
+    "selenium_ug": 70,
+    "vitamin_a_rae_ug": 900,
+    "vitamin_c_mg": 45,
+    "vitamin_d_IU": 200,
+    "vitamin_e_mg": 10,
+    "vitamin_k_ug": 70,
+    "thiamin_mg": 1.2,
+    "riboflavin_mg": 1.3,
+    "niacin_mg": 16,
+    "vitamin_b6_mg": 1.3,
+    "folate_total_ug": 400,
+    "vitamin_b12_ug": 2.4,
+    "pantothenic_acid_mg": 5,
+    "choline_mg": 550,
+    "tyrosine_g": null
+  },
+
+  "cuisine_prefs": [
+    "indian", 
+    "latin", 
+    "asian", 
+    "mediterranean",
+    "middle_eastern", 
+    "american", 
+    "european", 
+    "global"
+  ],
+
+  "dietary_preferences": [
+    "high_protein",
+    "gluten_free"
+  ],
+
+  "meal_structure": {
+    "days_per_week": 6,
+    "daily_meals": [
+      { "meal_type": "breakfast", "frequency": 1 },
+      { "meal_type": "lunch", "frequency": 1 },
+      { "meal_type": "dinner", "frequency": 1 },
+      { "meal_type": "snack", "frequency": 2 }
+    ],
+    "variety_multiplier": 2
+  }
+}
