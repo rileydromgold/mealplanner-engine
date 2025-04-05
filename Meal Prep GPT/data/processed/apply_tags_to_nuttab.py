@@ -1,7 +1,7 @@
 import json
 
 # === Load raw NUTTAB data ===
-with open("foundation_ingredients_nuttab.json", "r") as f:
+with open("data/raw/foundation_ingredients_nuttab.json", "r") as f:
     data = json.load(f)
 
 # === Fields to retain ===
@@ -11,10 +11,10 @@ KEEP_FIELDS = {
     "vitamin_a_rae_ug", "vitamin_c_mg", "vitamin_d_IU", "vitamin_e_mg", "vitamin_k_ug",
     "thiamin_mg", "riboflavin_mg", "niacin_mg", "vitamin_b6_mg", "folate_total_ug",
     "vitamin_b12_ug", "pantothenic_acid_mg", "choline_mg",
-    "tags", "usage_weight_class"
+    "tags", "usage_weight_class", "cuisine_profile"
 }
 
-# === Safe float parser (with passed-in ingredient)
+# === Safe float parser
 def val(field, ing):
     try:
         raw = str(ing.get(field, "")).replace(",", "").strip()
@@ -30,6 +30,15 @@ def infer_usage_weight_class(name: str) -> str:
     if any(kw in name for kw in micro_keywords): return "micro"
     if any(kw in name for kw in modest_keywords): return "modest"
     return "bulk"
+
+# === Cuisine profile inference
+def infer_cuisine_profile(name: str) -> str:
+    name = name.lower()
+    strong = ["seaweed", "nori", "kimchi", "gochujang", "paneer", "miso", "dashi", "chorizo"]
+    flexible = ["tahini", "tofu", "lentil", "chickpea", "salsa", "flax", "tempeh"]
+    if any(kw in name for kw in strong): return "strong"
+    if any(kw in name for kw in flexible): return "flexible"
+    return "neutral"
 
 # === Tag builder
 def build_tags(ing):
@@ -127,15 +136,15 @@ def assign_and_filter(ing):
         "pantothenic_acid_mg": val("Pantothenic acid (B5) \n(mg)", ing),
         "choline_mg": val("Choline \n(mg)", ing),
         "tags": build_tags(ing),
-        "usage_weight_class": infer_usage_weight_class(name)
+        "usage_weight_class": infer_usage_weight_class(name),
+        "cuisine_profile": infer_cuisine_profile(name)
     }
 
-    # Final cleanup: remove null or empty
     return {k: v for k, v in out.items() if k in KEEP_FIELDS and v not in [None, "", []]}
 
-# === Apply logic
+
+# === Run + Export
 tagged = [assign_and_filter(ing) for ing in data if ing.get("Food Name")]
 
-# === Export
-with open("foundation_ingredients_nuttab_TAGGED_CLEAN.json", "w") as f:
+with open("data/processed/foundation_ingredients_nuttab_TAGGED_CLEAN.json", "w") as f:
     json.dump(tagged, f, indent=2)

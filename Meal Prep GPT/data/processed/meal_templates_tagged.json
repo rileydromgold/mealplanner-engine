@@ -1,0 +1,183 @@
+[
+    {
+      "id": "grain_bowl",
+      "meal_types": ["lunch", "dinner"],
+      "required_one_of": ["animal_proteins", "plant_proteins"],
+      "required": ["starchy_carbs"],
+      "optional": ["non_starchy_veg", "healthy_fats", "sauces", "toppings", "flavor_bases"],
+      "cuisineVariants": ["asian", "latin", "mediterranean", "global"]
+    },
+    {
+      "id": "wrap_or_sandwich",
+      "meal_types": ["lunch", "dinner", "breakfast"],
+      "required_one_of": ["animal_proteins", "plant_proteins"],
+      "required": ["starchy_carbs"],
+      "optional": ["sauces", "non_starchy_veg", "toppings", "flavor_bases", "healthy_fats"],
+      "cuisineVariants": ["latin", "mediterranean", "global"]
+    },
+    {
+      "id": "tray_bake",
+      "meal_types": ["lunch", "dinner"],
+      "required_one_of": ["animal_proteins", "plant_proteins"],
+      "required": ["non_starchy_veg", "starchy_carbs", "healthy_fats"],
+      "optional": ["flavor_bases", "toppings"],
+      "cuisineVariants": ["mediterranean", "global", "middle_eastern","latin"]
+    },
+    {
+      "id": "stir_fry",
+      "meal_types": ["lunch", "dinner"],
+      "required_one_of": ["animal_proteins", "plant_proteins"],
+      "required": ["starchy_carbs", "non_starchy_veg"],
+      "optional": ["sauces", "toppings", "flavor_bases", "healthy_fats"],
+      "cuisineVariants": ["asian"]
+    },
+    {
+      "id": "noodle_bowl",
+      "meal_types": ["lunch", "dinner"],
+      "required_one_of": ["animal_proteins", "plant_proteins"],
+      "required": ["starchy_carbs", "non_starchy_veg"],
+      "optional": ["sauces", "flavor_bases", "healthy_fats"],
+      "cuisineVariants": ["asian"]
+    },
+    {
+      "id": "pita_plate",
+      "meal_types": ["lunch", "dinner"],
+      "required_one_of": ["animal_proteins", "plant_proteins"],
+      "required": ["starchy_carbs", "non_starchy_veg"],
+      "optional": ["sauces", "flavor_bases", "toppings"],
+      "cuisineVariants": ["mediterranean", "middle_eastern"]
+    },
+    {
+      "id": "flatbread_combo",
+      "meal_types": ["lunch", "dinner"],
+      "required_one_of": ["animal_proteins", "plant_proteins"],
+      "required": ["starchy_carbs"],
+      "optional": ["sauces", "toppings", "flavor_bases", "healthy_fats", "non_starchy_veg"],
+      "cuisineVariants": ["latin", "mediterranean"]
+    },
+    {
+      "id": "oat_bowl",
+      "meal_types": ["breakfast", "snack"],
+      "required_one_of": ["animal_proteins", "plant_proteins"],
+      "required": ["starchy_carbs"],
+      "optional": ["toppings", "healthy_fats", "flavor_bases"],
+      "cuisineVariants": ["global"]
+    },
+    {
+      "id": "yogurt_bowl",
+      "meal_types": ["breakfast", "snack"],
+      "required_one_of": ["animal_proteins", "plant_proteins"],
+      "required": ["starchy_carbs"],
+      "optional": ["toppings", "healthy_fats"],
+      "cuisineVariants": ["global"]
+    },
+    {
+      "id": "smoothie",
+      "meal_types": ["breakfast", "snack"],
+      "required_one_of": ["animal_proteins", "plant_proteins"],
+      "required": ["starchy_carbs", "healthy_fats"],
+      "optional": ["flavor_bases", "toppings"],
+      "cuisineVariants": ["global"]
+    },
+    {
+      "id": "frittata",
+      "meal_types": ["breakfast", "lunch"],
+      "required": ["animal_proteins", "non_starchy_veg", "healthy_fats"],
+      "optional": ["flavor_bases", "toppings"],
+      "cuisineVariants": ["mediterranean"],
+      "dietaryTags": ["contains_eggs"]
+    },
+    {
+      "id": "quinoa_salad_bowl",
+      "meal_types": ["lunch", "dinner"],
+      "required": ["plant_proteins", "starchy_carbs", "non_starchy_veg"],
+      "optional": ["sauces", "flavor_bases", "toppings"],
+      "cuisineVariants": ["mediterranean", "latin"],
+      "dietaryTags": ["vegan"]
+    },
+    {
+      "id": "snack_generic",
+      "meal_types": ["snack"],
+      "required_one_of": ["animal_proteins", "plant_proteins"],
+      "optional_any": ["starchy_carbs", "non_starchy_veg", "healthy_fats", "flavor_bases", "sauces", "toppings"],
+      "cuisineVariants": ["global"]
+    },
+    {
+      "id": "protein_bar_homemade",
+      "meal_types": ["snack"],
+      "required": ["plant_proteins", "starchy_carbs", "healthy_fats"],
+      "optional": ["flavor_bases"],
+      "cuisineVariants": ["global"],
+      "dietaryTags": ["vegan"]
+    },
+    {
+      "id": "egg_muffins",
+      "meal_types": ["breakfast", "snack"],
+      "required": ["animal_proteins", "non_starchy_veg", "healthy_fats"],
+      "optional": ["flavor_bases", "toppings"],
+      "cuisineVariants": ["global"]
+    },
+    {
+      "id": "lentil_stew",
+      "meal_types": ["lunch", "dinner"],
+      "required": ["plant_proteins", "non_starchy_veg"],
+      "optional": ["starchy_carbs", "flavor_bases", "healthy_fats"],
+      "cuisineVariants": ["mediterranean", "global"],
+      "dietaryTags": ["vegan"]
+    },
+    {
+      "id": "tofu_skewers_plate",
+      "meal_types": ["lunch", "dinner"],
+      "required": ["plant_proteins", "non_starchy_veg"],
+      "optional": ["starchy_carbs", "sauces", "flavor_bases"],
+      "cuisineVariants": ["asian", "mediterranean"],
+      "dietaryTags": ["vegan"]
+    },
+    {
+      "id": "chickpea_flatbread_wrap",
+      "meal_types": ["lunch", "dinner"],
+      "required": ["plant_proteins", "starchy_carbs"],
+      "optional": ["non_starchy_veg", "sauces", "flavor_bases"],
+      "cuisineVariants": ["latin", "middle_eastern"],
+      "dietaryTags": ["vegan"]
+    },
+    {
+      "id": "stuffed_sweet_potatoes",
+      "meal_types": ["lunch", "dinner"],
+      "required_one_of": ["animal_proteins", "plant_proteins"],
+      "required": ["starchy_carbs", "non_starchy_veg"],
+      "optional": ["toppings", "healthy_fats"],
+      "cuisineVariants": ["global","latin","middle_eastern"]
+    },
+    {
+      "id": "rice_and_beans_plate",
+      "meal_types": ["lunch", "dinner"],
+      "required": ["plant_proteins", "starchy_carbs"],
+      "optional": ["non_starchy_veg", "flavor_bases", "toppings"],
+      "cuisineVariants": ["latin"],
+      "dietaryTags": ["vegan"]
+    },
+    {
+      "id": "chili_bowl",
+      "meal_types": ["lunch", "dinner"],
+      "required": ["plant_proteins", "non_starchy_veg"],
+      "optional": ["starchy_carbs", "flavor_bases"],
+      "cuisineVariants": ["latin", "american"],
+      "dietaryTags": ["vegan"]
+    },
+    {
+      "id": "breakfast_hash",
+      "meal_types": ["breakfast"],
+      "required": ["starchy_carbs", "non_starchy_veg", "animal_proteins"],
+      "optional": ["flavor_bases", "healthy_fats"],
+      "cuisineVariants": ["american", "global"]
+    },
+    {
+      "id": "pasta_plate",
+      "meal_types": ["lunch", "dinner"],
+      "required_one_of": ["animal_proteins", "plant_proteins"],
+      "required": ["starchy_carbs"],
+      "optional": ["non_starchy_veg", "sauces", "flavor_bases", "toppings"],
+      "cuisineVariants": ["european", "mediterranean"]
+    }  
+  ]

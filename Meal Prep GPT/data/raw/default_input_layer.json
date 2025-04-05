@@ -27,21 +27,16 @@
     "tyrosine_g": null
   },
 
-  "cuisine_prefs": [
-    "indian", 
-    "latin", 
-    "asian", 
-    "mediterranean",
-    "middle_eastern", 
-    "american", 
-    "european", 
-    "global"
-  ],
+  "cuisine_prefs": ["mediterranean","latin"],
 
-  "dietary_preferences": [
-    "high_protein",
-    "gluten_free"
-  ],
+  "tag_filters": {
+    "requiredTags": {
+      "dietaryTags": ["vegan"]
+    },
+    "preferredTags": {
+      "nutritionTags": ["high_protein"]
+    }
+  },
 
   "meal_structure": {
     "days_per_week": 6,
@@ -51,6 +46,6 @@
       { "meal_type": "dinner", "frequency": 1 },
       { "meal_type": "snack", "frequency": 2 }
     ],
-    "variety_multiplier": 2
+    "variety_multiplier": 3
   }
 }
