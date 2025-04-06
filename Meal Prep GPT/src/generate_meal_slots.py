@@ -30,7 +30,8 @@ def generate_meal_slots(user):
         tag_filters=tag_filters,
         cuisine_prefs=cuisine_prefs,
         template_path=template_path,
-        debug=True  # 🛠️ enable full template_pool output
+        meal_structure=meal_structure,
+        debug=True  # 🔧 enable full template_pool output
     )
 
     slots = []

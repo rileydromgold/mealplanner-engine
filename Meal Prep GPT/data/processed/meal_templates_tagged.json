@@ -53,7 +53,7 @@
       "required_one_of": ["animal_proteins", "plant_proteins"],
       "required": ["starchy_carbs"],
       "optional": ["sauces", "toppings", "flavor_bases", "healthy_fats", "non_starchy_veg"],
-      "cuisineVariants": ["latin", "mediterranean"]
+      "cuisineVariants": ["latin", "mediterranean","asian"]
     },
     {
       "id": "oat_bowl",
@@ -64,12 +64,30 @@
       "cuisineVariants": ["global"]
     },
     {
-      "id": "yogurt_bowl",
+      "id": "overnight_oats",
       "meal_types": ["breakfast", "snack"],
       "required_one_of": ["animal_proteins", "plant_proteins"],
       "required": ["starchy_carbs"],
-      "optional": ["toppings", "healthy_fats"],
+      "optional": ["toppings", "healthy_fats", "flavor_bases"],
       "cuisineVariants": ["global"]
+    },
+    {
+      "id": "yogurt_bowl",
+      "meal_types": ["breakfast", "snack"],
+      "required_one_of": ["animal_proteins"],
+      "required": ["starchy_carbs"],
+      "optional": ["toppings", "healthy_fats"],
+      "cuisineVariants": ["global"],
+      "dietaryTags":["contains_dairy"]
+    },
+    {
+      "id": "vegan_yogurt_bowl",
+      "meal_types": ["breakfast", "snack"],
+      "required_one_of": ["plant_proteins"],
+      "required": ["starchy_carbs"],
+      "optional": ["toppings", "healthy_fats"],
+      "cuisineVariants": ["global"],
+      "dietaryTags":["vegan"]
     },
     {
       "id": "smoothie",
@@ -88,11 +106,19 @@
       "dietaryTags": ["contains_eggs"]
     },
     {
+      "id": "omelette",
+      "meal_types": ["breakfast", "lunch"],
+      "required": ["animal_proteins", "non_starchy_veg", "healthy_fats"],
+      "optional": ["flavor_bases", "toppings"],
+      "cuisineVariants": ["mediterranean"],
+      "dietaryTags": ["contains_eggs"]
+    },
+    {
       "id": "quinoa_salad_bowl",
       "meal_types": ["lunch", "dinner"],
       "required": ["plant_proteins", "starchy_carbs", "non_starchy_veg"],
       "optional": ["sauces", "flavor_bases", "toppings"],
-      "cuisineVariants": ["mediterranean", "latin"],
+      "cuisineVariants": ["mediterranean", "latin","asian"],
       "dietaryTags": ["vegan"]
     },
     {
@@ -103,12 +129,19 @@
       "cuisineVariants": ["global"]
     },
     {
-      "id": "protein_bar_homemade",
+      "id": "vegan_protein_bar_homemade",
       "meal_types": ["snack"],
       "required": ["plant_proteins", "starchy_carbs", "healthy_fats"],
       "optional": ["flavor_bases"],
       "cuisineVariants": ["global"],
       "dietaryTags": ["vegan"]
+    },
+    {
+      "id": "protein_bar_homemade",
+      "meal_types": ["snack"],
+      "required": ["animal_proteins", "starchy_carbs", "healthy_fats"],
+      "optional": ["flavor_bases"],
+      "cuisineVariants": ["global"]
     },
     {
       "id": "egg_muffins",
@@ -128,10 +161,17 @@
     {
       "id": "tofu_skewers_plate",
       "meal_types": ["lunch", "dinner"],
-      "required": ["plant_proteins", "non_starchy_veg"],
-      "optional": ["starchy_carbs", "sauces", "flavor_bases"],
+      "required": ["plant_proteins", "non_starchy_veg", "starchy_carbs"],
+      "optional": ["sauces", "flavor_bases"],
       "cuisineVariants": ["asian", "mediterranean"],
       "dietaryTags": ["vegan"]
+    },
+    {
+      "id": "meat_skewers_plate",
+      "meal_types": ["lunch", "dinner"],
+      "required": ["plant_proteins", "non_starchy_veg", "starchy_carbs"],
+      "optional": ["sauces", "flavor_bases"],
+      "cuisineVariants": ["asian", "mediterranean","latin"]
     },
     {
       "id": "chickpea_flatbread_wrap",
@@ -158,9 +198,17 @@
       "dietaryTags": ["vegan"]
     },
     {
-      "id": "chili_bowl",
+      "id": "vegan_chili_bowl",
       "meal_types": ["lunch", "dinner"],
       "required": ["plant_proteins", "non_starchy_veg"],
+      "optional": ["starchy_carbs", "flavor_bases"],
+      "cuisineVariants": ["latin", "american"],
+      "dietaryTags": ["vegan"]
+    },
+    {
+      "id": "chili_bowl",
+      "meal_types": ["lunch", "dinner"],
+      "required": ["animal_proteins", "non_starchy_veg"],
       "optional": ["starchy_carbs", "flavor_bases"],
       "cuisineVariants": ["latin", "american"],
       "dietaryTags": ["vegan"]
@@ -171,6 +219,13 @@
       "required": ["starchy_carbs", "non_starchy_veg", "animal_proteins"],
       "optional": ["flavor_bases", "healthy_fats"],
       "cuisineVariants": ["american", "global"]
+    },
+    {
+      "id": "burgers",
+      "meal_types": ["dinner", "lunch"],
+      "required": ["starchy_carbs", "non_starchy_veg", "animal_proteins"],
+      "optional": ["flavor_bases", "healthy_fats"],
+      "cuisineVariants": ["global"]
     },
     {
       "id": "pasta_plate",

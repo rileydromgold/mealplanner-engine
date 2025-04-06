@@ -46,6 +46,6 @@
       { "meal_type": "dinner", "frequency": 1 },
       { "meal_type": "snack", "frequency": 2 }
     ],
-    "variety_multiplier": 3
+    "variety_multiplier": 6
   }
 }

@@ -46,7 +46,7 @@ def score_preferred_tags(tmpl, preferred_tags, cuisine_prefs=None):
         score += sum(1 for tag in preferred_list if tag in tmpl.get(tag_group, []))
 
     if cuisine_prefs:
-        score += sum(1 for tag in cuisine_prefs if tag in tmpl.get("cuisineTags", []))
+        score += sum(1 for tag in cuisine_prefs if tag in tmpl.get("cuisineVariants", []))
 
     return score
 
@@ -57,26 +57,30 @@ def build_template_pool(templates):
             pool[meal_type].append(tmpl)
     return pool
 
-def select_templates(tag_filters, cuisine_prefs, template_path, templates_per_type=2, debug=False):
+def select_templates(tag_filters, cuisine_prefs, template_path, meal_structure, debug=False):
     templates = load_template_json(template_path)
     pool = build_template_pool(templates)
     used_templates = set()
 
     required_tags = tag_filters.get("requiredTags", {})
     preferred_tags = tag_filters.get("preferredTags", {})
+    variety_multiplier = meal_structure.get("variety_multiplier", 2)
 
     selected = {}
-    for meal_type, candidates in pool.items():
+    for meal_def in meal_structure.get("daily_meals", []):
+        meal_type = meal_def["meal_type"]
+        frequency = meal_def.get("frequency", 1)
+        templates_per_type = frequency * variety_multiplier
+
+        candidates = pool.get(meal_type, [])
         valid = [t for t in candidates if matches_required_tags(t, required_tags)]
         scored = [(t, score_preferred_tags(t, preferred_tags, cuisine_prefs)) for t in valid if t["id"] not in used_templates]
 
-        # Sort by score and shuffle ties
         random.shuffle(scored)
         scored.sort(key=lambda x: x[1], reverse=True)
 
         final = [t[0] for t in scored[:templates_per_type]]
 
-        # If not enough, fallback
         if len(final) < templates_per_type:
             fallback = [t for t in candidates if t["id"] not in used_templates and t not in final]
             random.shuffle(fallback)
@@ -106,6 +110,7 @@ if __name__ == "__main__":
         tag_filters=extract_tag_filters(user["input_layer"]),
         cuisine_prefs=user["input_layer"].get("cuisine_prefs", []),
         template_path=Path("docs/meal_templates_tagged.json"),
+        meal_structure=user["input_layer"].get("meal_structure", {}),
         debug=False
     )
 
